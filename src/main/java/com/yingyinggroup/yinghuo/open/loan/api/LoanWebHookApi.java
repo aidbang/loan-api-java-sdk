@@ -13,11 +13,11 @@ import feign.RequestLine;
 public interface LoanWebHookApi extends LoanApiClient.Api {
 
     /**
-     * 查询渠道内的产品列表
+     * 确认绑卡状态通知
      *
      * @return
      */
-    @RequestLine("POST /api/webhook/loan-api/bank_card_bind_notification")
+    @RequestLine("POST /open-api/loan-market/merchant/bank_card_bind_notification")
     @Headers("Content-Type: application/json")
     NotificationResponseDTO notifyBankCardBindStatus(BankCardBindingNotificationDTO bankCardBindingNotificationDTO);
 
